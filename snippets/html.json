@@ -1,0 +1,109 @@
+{
+   "html ( include css js links )": {
+      "prefix": "html structure",
+      "body": [
+         "<!DOCTYPE html>\r",
+         "<html lang=\"en\">\r",
+         "\t<head>\r",
+         "\t\t<meta charset=\"UTF-8\" />\r",
+         "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r",
+         "\t\t<meta name=\"author\" content=\"Abishek\">\r",
+         "\t\t<title>${1|Abishek,Javascript,Test,Something,Document|}</title>\r",
+         "\t\t<link rel=\"stylesheet\" href=\"./${2:style.css}\" />\r",
+         "\t</head>\r",
+         "\t<body>\r",
+         "\t\t$0\r",
+         "\t\t<script src=\"./${3:index.js}\"></script>\r",
+         "\t</body>\r",
+         "</html>"
+      ]
+   },
+   "html all ( include sematic tag )": {
+      "prefix": "html structure with sematic",
+      "body": [
+         "<!DOCTYPE html>\r",
+         "<html lang=\"en\">\r",
+         "\t<head>\r",
+         "\t\t<meta charset=\"UTF-8\" />\r",
+         "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r",
+         "\t\t<meta name=\"author\" content=\"Abishek\">\r",
+         "\t\t<title>${1|Abishek,Javascript,Test,Someting,Document|}</title>\r",
+         "\t\t<link rel=\"stylesheet\" href=\"./${2:style.css}\" />\r",
+         "\t</head>\r",
+         "\t<body>\r",
+         "\t\t<header>\r",
+         "\t\t\t<nav>\r",
+         "\t\t\t\t$0\r",
+         "\t\t\t</nav>\r",
+         "\t\t</header>\r",
+         "\t\t<main>\r",
+         "\t\t\t<section>\r",
+         "\r",
+         "\t\t\t</section>\r",
+         "\t\t\t<section>\r",
+         "\r",
+         "\t\t\t</section>\r",
+         "\t\t</main>\r",
+         "\t\t<footer>\r",
+         "\t\t</footer>\r",
+         "\t\t<script src=\"./${3:index.js}\"></script>\r",
+         "\t</body>\r",
+         "</html>"
+      ]
+   },
+   "html sematic structure": {
+      "prefix": ["ssf", "sematic structure full"],
+      "body": [
+         "<header>\r",
+         "\t<nav>\r",
+         "\t\t$0\r",
+         "\t</nav>\r",
+         "</header>\r",
+         "<main>\r",
+         "\t<section>\r",
+         "\r",
+         "\t</section>\r",
+         "\r",
+         "\t<section>\r",
+         "\r",
+         "\t</section>\r",
+         "</main>\r",
+         "<footer>\r",
+         "\r",
+         "</footer>"
+      ]
+   },
+   "html sematice structure 1": {
+      "prefix": ["ss1", "sematic structure 1"],
+      "body": [
+         "<header>\r",
+         "\t<nav>\r",
+         "\t\t$0\r",
+         "\t</nav>\r",
+         "</header>\r"
+      ]
+   },
+   "html sematice structure 2": {
+      "prefix": ["ss2", "sematic structure 2"],
+      "body": [
+         "<main>\r",
+         "\t<section>\r",
+         "\t\t$0\r",
+         "\t</section>\r",
+         "\r",
+         "\t<section>\r",
+         "\r",
+         "\t</section>\r",
+         "</main>\r"
+      ]
+   },
+   "html sematice structure 3": {
+      "prefix": ["ss3", "sematic structure 3"],
+      "body": ["<footer>\r", "\t$0\r", "</footer>"]
+   },
+   "author (abishek)": {
+      "prefix": "author",
+      "body": "<meta name=\"author\" content=\"Abishek\">",
+      "description": "author name for metadata"
+   },
+}

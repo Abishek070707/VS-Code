@@ -1,0 +1,32 @@
+{
+   "all element styling": {
+   "prefix": ["*", "css s", "css start", "css1"],
+      "body": [
+         "* {\r",
+         "\tmargin: 0;\r",
+         "\tpadding: 0;\r",
+         "\tbox-sizing: border-box;\r",
+         "\t$1\r",
+         "}\r",
+         "$0\r"
+      ],
+      "description": "all elements style "
+   },
+   "flex center": {
+      "prefix": "flex center",
+      "body": [
+         "display: flex;\r",
+         "align-items: center;\r",
+         "justify-content: center;"
+      ],
+      "description": "make the container center using flex box"
+   },
+   "flex - box": {
+      "prefix": ["flex - box"],
+      "body": [
+         "display: flex;",
+         "align-items: ${1|center,flex-start,flex-end,stretch,baseline,|};",
+         ""
+      ]
+   }
+}

@@ -1,0 +1,22 @@
+{
+   "all element styling": {
+      "prefix": ["*", "css1", "css start", "css s"],
+      "body": [
+         "* {\r",
+         "  margin: 0;\r",
+         "  padding: 0;\r",
+         "  box-sizing: border-box;\r",
+         "}"
+      ],
+      "description": "styles for all elements"
+   },
+   "flex center": {
+      "prefix": "flex center",
+      "body": [
+         "display: flex;\r",
+         "align-items: center;\r",
+         "justify-content: center;"
+      ],
+      "description": "make the container center using flex box"
+   }
+}

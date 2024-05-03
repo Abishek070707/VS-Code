@@ -1,0 +1,10 @@
+{
+	"get the element by id": {
+		"prefix": "get id",
+		"body":[
+			"const ${2:MyVariableName} = document.getElementById('${1:id-name}');",
+			"$0",
+		],
+		"description": "select the tag with id using DOM model"
+	},
+}

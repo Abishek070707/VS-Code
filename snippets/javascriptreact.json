@@ -1,0 +1,68 @@
+{
+   "Print to console": {
+      "prefix": ["l", "cl", "clg", "lg", "log"],
+      "body": ["console.log($1);$0"],
+      "description": "Log output to console"
+   },
+   "component (React)": {
+      "prefix": ["c", "com", "compo", "component"],
+      "body": [
+         "import './${1:${TM_FILENAME_BASE/(.+)/${1:/capitalize}/}.css}';",
+         "\r",
+         "const ${TM_FILENAME_BASE/(.+)/${1:/capitalize}/} = () => {\r",
+         "\treturn (\r",
+         "\t\t<${2|div,header,nav,main,section,footer|}>\r",
+         "\t\t\t$0\r",
+         "\t\t</${2|div,header,nav,main,section,footer|}>\r",
+         "\t);\r",
+         "};\r",
+         "export default ${TM_FILENAME_BASE/(.+)/${1:/capitalize}/};",
+         "\r"
+      ]
+   },
+   "imp { | } from 'module'": {
+      "prefix": ["i", "imp", "import"],
+      "body": ["import { $2 } from '${1:module}';\r", "$0\r"],
+      "description": "import statement"
+   },
+   "Import Respected CSS File": {
+      "prefix": ["ic", "imp c", "imp css"],
+      "body": "import '${1:${TM_FILENAME_BASE/^(.)(.*)/${1:/downcase}${2}/}.css}';",
+      "description": "import statement for css file in react"
+   },
+   "useState React Hook": {
+      "prefix": ["us", "ustate", "useState"],
+      "body": [
+         "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2);",
+         ""
+      ],
+      "description": "useState hook in React"
+   },
+
+   // ----------------------------------------------- HTML FILE ------------------------------------------------- \\
+
+   "div with class": {
+      "prefix": "div",
+      "body": "<div class=\"$1\">$0</div>"
+   },
+   "div with id": {
+      "prefix": "div",
+      "body": "<div id=\"$1\">$0</div>"
+   },
+   "div with class and id": {
+      "prefix": "div",
+      "body": "<div class=\"$1\" id=\"$2\">$0</div>"
+   },
+   "h1 with class": {
+      "prefix": "h1",
+      "body": "<h1 class=\"$1\">$0</h1>"
+   },
+   "h1 with id": {
+      "prefix": "h1",
+      "body": "<h1 id=\"$1\">$0</h1>"
+   },
+   "h1 with class and id": {
+      "prefix": "h1",
+      "body": "<h1 class=\"$1\" id=\"$2\">$0</h1>"
+   }
+}
