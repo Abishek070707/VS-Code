@@ -90,7 +90,7 @@
       },
       {
          "tag": "*",
-         "color": "#98C379",
+         "color": "#87ceeb",
          "strikethrough": false,
          "underline": false,
          "backgroundColor": "transparent",
@@ -122,6 +122,7 @@
    "cSpell.userWords": [
       "Abishek",
       "astro",
+      "autofetch",
       "autoimport",
       "brandonkirbyson",
       "Cascadia",
@@ -130,20 +131,20 @@
       "ELCOT",
       "esbenp",
       "Greatstack",
+      "pagedown",
+      "pageup",
       "quickfix",
       "stylesheet",
       "tabnine",
       "titlebar",
-      "togglequotes"
+      "togglequotes",
+      "Trady"
    ],
 
    // ---------------------------------- Normal setting ------------------------------------------- \\
    "security.workspace.trust.untrustedFiles": "open",
-   "breadcrumbs.enabled": false,
-   "window.zoomLevel": 0.5,
    "editor.formatOnSave": true,
    "editor.defaultFormatter": "esbenp.prettier-vscode",
-   "workbench.editor.enablePreview": false,
    "window.menuBarVisibility": "toggle",
    "editor.mouseWheelZoom": true,
    "workbench.iconTheme": "material-icon-theme",
@@ -199,8 +200,6 @@
    "workbench.colorTheme": "Aura Dracula Spirit",
    "material-icon-theme.hidesExplorerArrows": true,
    "workbench.tree.renderIndentGuides": "none",
-   "workbench.sideBar.location": "right",
-   "workbench.editor.showTabs": "multiple",
    "workbench.tips.enabled": false,
    "workbench.colorCustomizations": {
       "editorSuggestWidget.selectedBackground": "#231739",
@@ -210,7 +209,6 @@
       "list.focusBackground": "#231739",
       "list.hoverBackground": "#231739"
    },
-   "editor.guides.indentation": false,
    "editor.renderWhitespace": "none",
    "editor.renderLineHighlight": "none",
    "editor.matchBrackets": "never",
@@ -223,71 +221,31 @@
    "editor.tabSize": 3,
    "editor.detectIndentation": false,
    "editor.fontSize": 15,
-   "editor.fontLigatures": false,
+   "editor.fontLigatures": true,
    "explorer.confirmDragAndDrop": false,
    "explorer.confirmDelete": false,
    "explorer.compactFolders": false,
    "git.decorations.enabled": false,
    "scm.diffDecorations": "none",
    "files.insertFinalNewline": true,
-   "apc.electron": {
-      "titleBarStyle": "hidden",
-      "opacity": 1
-   },
-   "apc.font.family": "Cascadia Code",
-   "update.mode": "default",
-   "apc.menubar.compact": true,
-   "apc.activityBar": {
-      "position": "bottom",
-      "size": 30,
-      "itemSize": 30,
-      "itemMargin": 0
-   },
-   "apc.header": {
-      "height": 40
-   },
-   "apc.sidebar.titlebar": {
-      "height": 45,
-      "fontSize": 12
-   },
-   "apc.statusBar": {
-      "position": "editor-bottom",
-      "height": 30
-   },
-   "apc.listRow": {
-      "lists": ["explorer-folders-view", "quick-input-list", "results"],
-      "height": 28,
-      "fontSize": 12.5
-   },
-   "apc.stylesheet": {
-      // ".title-actions": "display: none !important", // toggle the new file and new folder icon
-      ".quick-input-widget.show-file-icons, .editor-widget.fin-widget": "box-shadow: none !important",
-      ".sidebar .title-label": "padding: 0 !important",
-      ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
-      ".sidebar": "border-left: 1px solid #231739 !important",
-      ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(135deg, #67D0ff 10%, #C45DFF 100%)",
-      ".quick-input-list-row div": "display: flex !important; align-items: center !important; gap: 3px",
-      ".sidebar .title-label h2": "line-height: 3.1 !important; font-size: 13px !important; font-weight: 600 !important; font-family: Consolas !important",
-      ".monaco-split-view2 > .monaco-scrollable-element > .split-view-container": "background: #140E1A !important"
-   },
-   "animations.Install-Method": "Apc Customize UI++",
-   "apc.imports": [
-      "file:///c:/Users/ELCOT/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.2/dist/updateHandler.js"
-   ],
-   "animations.Default-Duration": 200,
-   "animations.Scrolling": "Fade",
-   "animations.Enabled": false,
-   "animations.Command-Palette": "Slide",
-   "animations.CursorAnimationOptions": {
-      "Color": "#C45DFF"
-   },
-   "animations.Durations": {
-      "Command-Palette": 500,
-      "Scrolling": 1000,
-      "Smooth-Mode": 1000
-   },
-   "editor.fontFamily": "'Cascadia Code'",
-   "workbench.statusBar.visible": false,
-   "git.autofetch": true
+   "editor.fontFamily": "Cascadia Code",
+   "workbench.statusBar.visible": true,
+   "git.autofetch": true,
+   "git.enableSmartCommit": true,
+   "git.confirmSync": false,
+   "workbench.sideBar.location": "right",
+   "workbench.activityBar.location": "side",
+   "editor.guides.indentation": false,
+   "breadcrumbs.enabled": false,
+   "extensions.autoUpdate": false,
+   "terminal.integrated.defaultProfile.windows": "Git Bash",
+   "turboConsoleLog.addSemicolonInTheEnd": true,
+   "turboConsoleLog.quote": "'",
+   "turboConsoleLog.logMessagePrefix": "",
+   "turboConsoleLog.insertEmptyLineAfterLogMessage": true,
+   "turboConsoleLog.insertEmptyLineBeforeLogMessage": true,
+   "turboConsoleLog.logMessageSuffix": " : ",
+   "turboConsoleLog.delimiterInsideMessage": "",
+   "workbench.editor.enablePreview": false,
+   "window.zoomLevel": 0.5
 }
-
