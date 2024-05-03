@@ -1,364 +1,248 @@
 [
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! -------------------------------------- [ Extension: Toggle ] --------------------------------------- \\
+
+   // ! ------ for Zen Mode - Toggle the Minimap, Status bar, ( "ctrl + shift + z" )
    {
-      "key": "alt+q",
-      "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-      "when": "!activeEditorGroupEmpty"
+      "key": "ctrl+shift+z",
+      "command": "toggle",
+      "args": {
+         "id": "zen",
+         "value": [
+            {
+               "editor.minimap.enabled": true,
+               "workbench.statusBar.visible": true
+            },
+            {
+               "editor.minimap.enabled": false,
+               "workbench.statusBar.visible": false
+            }
+         ]
+      }
    },
    {
-      "key": "ctrl+tab",
-      "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-      "when": "!activeEditorGroupEmpty"
+      "key": "ctrl+k a",
+      "command": "toggle",
+      "args": {
+         "id": "zen",
+         "value": [
+            {
+               "workbench.activityBar.location": "side"
+            },
+            {
+               "workbench.activityBar.location": "hidden"
+            }
+         ]
+      }
    },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- open the previous editor ( "ctrl + fn + upArrow" || "ctrl + fn + rightArrow" )
    {
-      "key": "alt+q",
-      "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
-      "when": "inEditorsPicker && inQuickOpen"
-   },
-   {
-      "key": "ctrl+tab",
-      "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
-      "when": "inEditorsPicker && inQuickOpen"
-   },
-   {
-      "key": "ctrl+q",
-      "command": "-workbench.action.quickOpenView"
-   },
-   {
-      "key": "ctrl+q",
-      "command": "-workbench.action.quickOpenNavigateNextInViewPicker",
-      "when": "inQuickOpen && inViewsPicker"
-   },
-   {
-      "key": "alt+w",
-      "command": "workbench.action.closeActiveEditor"
-   },
-   {
-      "key": "ctrl+w",
-      "command": "-workbench.action.closeActiveEditor"
-   },
-   {
-      "key": "ctrl+n",
-      "command": "extension.advancedNewFile"
-   },
-   {
-      "key": "ctrl+alt+n",
-      "command": "-extension.advancedNewFile"
-   },
-   {
-      "key": "ctrl+n",
-      "command": "-workbench.action.files.newUntitledFile"
-   },
-   {
-      "key": "alt+1",
-      "command": "-workbench.action.openEditorAtIndex1"
-   },
-   {
-      "key": "ctrl+shift+c",
-      "command": "workbench.files.action.collapseExplorerFolders"
-   },
-   {
-      "key": "alt+3",
-      "command": "-workbench.action.openEditorAtIndex3"
-   },
-   {
-      "key": "alt+c",
-      "command": "workbench.files.action.collapseExplorerFolders"
-   },
-   {
-      "key": "alt+2",
-      "command": "-workbench.action.openEditorAtIndex2"
-   },
-   {
-      "key": "alt+2",
-      "command": "workbench.action.quickOpen"
-   },
-   {
-      "key": "alt+2",
-      "command": "workbench.action.quickOpenNavigateNextInFilePicker",
-      "when": "inFilesPicker && inQuickOpen"
-   },
-   {
-      "key": "alt+right",
-      "command": "workbench.action.nextEditor"
-   },
-   {
-      "key": "shift+alt+oem_2",
-      "command": "workbench.action.toggleSidebarVisibility"
-   },
-   {
-      "key": "shift+alt+left",
-      "command": "workbench.action.moveEditorLeftInGroup"
-   },
-   {
-      "key": "shift+alt+right",
-      "command": "workbench.action.moveEditorRightInGroup"
-   },
-   {
-      "key": "backspace",
-      "command": "-extension.smartBackspace",
-      "when": "config.hungryDelete.enableSmartBackspace && editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "shift+alt+\\",
-      "command": "editor.action.toggleMinimap"
-   },
-   {
-      "key": "shift+alt+.",
-      "command": "-editor.action.autoFix",
-      "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
-   },
-   {
-      "key": "ctrl+shift+.",
-      "command": "-breadcrumbs.toggleToOn",
-      "when": "!config.breadcrumbs.enabled"
-   },
-   {
-      "key": "ctrl+shift+\\",
-      "command": "-editor.action.jumpToBracket",
-      "when": "editorTextFocus"
-   },
-   {
-      "key": "ctrl+shift+\\",
-      "command": "-workbench.action.terminal.focusTabs",
-      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
-   },
-   {
-      "key": "ctrl+shift+.",
-      "command": "-breadcrumbs.focusAndSelect",
-      "when": "breadcrumbsPossible && breadcrumbsVisible"
-   },
-   {
-      "key": "ctrl+shift+.",
-      "command": "-editor.action.accessibleViewGoToSymbol",
-      "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
-   },
-   {
-      "key": "ctrl+shift+.",
-      "command": "-editor.action.inPlaceReplace.down",
-      "when": "editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+shift+;",
-      "command": "-breadcrumbs.focus",
-      "when": "breadcrumbsPossible && breadcrumbsVisible"
-   },
-   {
-      "key": "ctrl+shift+;",
-      "command": "-breadcrumbs.focus"
-   },
-   {
-      "key": "ctrl+shift+/",
-      "command": "workbench.action.toggleSidebarVisibility"
-   },
-   {
-      "key": "ctrl+shift+\\",
-      "command": "editor.action.toggleMinimap"
-   },
-   {
-      "key": "ctrl+w",
-      "command": "workbench.action.closeActiveEditor"
-   },
-   {
-      "key": "alt+w",
-      "command": "-extension.htmlTagWrap",
-      "when": "editorTextFocus"
-   },
-   {
-      "key": "ctrl+backspace",
-      "command": "-extension.hungryDelete",
-      "when": "editorTextFocus && !editorReadonly"
-   },
-   {
-      "key": "ctrl+backspace",
-      "command": "extension.hungryDelete"
-   },
-   {
-      "key": "ctrl+shift+.",
-      "command": "workbench.action.toggleActivityBarVisibility"
-   },
-   {
-      "key": "shift+alt+.",
-      "command": "workbench.action.toggleActivityBarVisibility"
-   },
-   {
-      "key": "ctrl+shift+w",
-      "command": "extension.htmlTagWrap"
-   },
-   {
-      "key": "shift+alt+w",
-      "command": "workbench.action.closeAllEditors"
-   },
-   {
-      "key": "ctrl+pageup",
-      "command": "workbench.action.terminal.scrollToTop",
-      "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
-   },
-   {
-      "key": "ctrl+home",
-      "command": "-workbench.action.terminal.scrollToTop",
-      "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
-   },
-   {
-      "key": "ctrl+pagedown",
-      "command": "workbench.action.terminal.scrollToBottom",
-      "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
-   },
-   {
-      "key": "ctrl+end",
-      "command": "-workbench.action.terminal.scrollToBottom",
-      "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
-   },
-   {
-      "key": "ctrl+pagedown",
-      "command": "interactive.scrollToBottom",
-      "when": "activeEditor == 'workbench.editor.interactive'"
-   },
-   {
-      "key": "ctrl+end",
-      "command": "-interactive.scrollToBottom",
-      "when": "activeEditor == 'workbench.editor.interactive'"
-   },
-   {
-      "key": "ctrl+pageup",
-      "command": "interactive.scrollToTop",
-      "when": "activeEditor == 'workbench.editor.interactive'"
-   },
-   {
-      "key": "ctrl+home",
-      "command": "-interactive.scrollToTop",
-      "when": "activeEditor == 'workbench.editor.interactive'"
-   },
-   {
-      "key": "ctrl+end",
-      "command": "workbench.action.nextEditor"
-   },
-   {
-      "key": "alt+left",
-      "command": "workbench.action.previousEditor"
-   },
-   {
-      "key": "ctrl+pageup",
+      "key": "ctrl+pageUp",
       "command": "-workbench.action.previousEditor"
    },
    {
+      "key": "ctrl+end",
+      "command": "workbench.action.nextEditor"
+   },
+   {
+      "key": "ctrl+pageUp",
+      "command": "workbench.action.nextEditor"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- open the previous editor  ( "ctrl + fn + downArrow" || "ctrl + fn + leftArrow" )
+   {
+      "key": "ctrl+pagedown",
+      "command": "workbench.action.previousEditor"
+   },
+   {
+      "key": "ctrl+pagedown",
+      "command": "-workbench.action.nextEditor"
+   },
+   {
       "key": "ctrl+home",
       "command": "workbench.action.previousEditor"
    },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- close the current editor  ( "Alt + W" || "ctrl + W" )
+   {
+      "key": "alt+w",
+      "command": "workbench.action.closeActiveEditor"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- open the DropDown for the Activity bar   ( "Alt + `" || "ctrl + Q" )
    {
       "key": "alt+`",
       "command": "workbench.action.quickOpenView"
    },
-   {
-      "key": "shift+alt+`",
-      "command": "workbench.action.quickOpenNavigatePreviousInViewPicker",
-      "when": "inQuickOpen"
-   },
-   {
-      "key": "ctrl+shift+q",
-      "command": "-workbench.action.quickOpenNavigatePreviousInViewPicker",
-      "when": "inQuickOpen && inViewsPicker"
-   },
+
    {
       "key": "alt+`",
       "command": "workbench.action.quickOpenNavigateNextInViewPicker",
-      "when": "inQuickOpen"
+      "when": "inQuickOpen && inViewsPicker"
+   },
+
+   // * -----  Previous: (Alt + Shift + ` ||  "ctrl + shift + Q"  )
+   {
+      "key": "shift+alt+`",
+      "command": "workbench.action.quickOpenNavigatePreviousInViewPicker",
+      "when": "inQuickOpen && inViewsPicker"
+   },
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- removed the default command for ( "ctrl + N" ) [ which is new united file ]
+   {
+      "key": "ctrl+n",
+      "command": "-workbench.action.files.newUntitledFile"
+   },
+
+   // ! added the ( "ctrl + N" ) for the [ advance new file extension ] ||  ( "ctrl + Alt + n" )
+   {
+      "key": "ctrl+n",
+      "command": "extension.advancedNewFile"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- create a new terminal ( "ctrl + N" )
+   {
+      "key": "ctrl+n",
+      "command": "workbench.action.terminal.new",
+      "when": "terminalFocus && terminalIsOpen"
+   },
+
+   // ! ----- Kill the current terminal ( "ctrl + W" || "Alt + w" )
+   {
+      "key": "ctrl+w",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus && terminalIsOpen"
    },
    {
-      "key": "shift+alt+1",
-      "command": "-workbench.action.moveEditorToFirstGroup"
+      "key": "alt+w",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus && terminalIsOpen"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- paste in terminal ( "ctrl + v" || "ctrl + shift + v" )
+   {
+      "key": "ctrl+v",
+      "command": "workbench.action.terminal.paste",
+      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- extend the terminal view ("shift + up")
+   {
+      "key": "shift+up",
+      "command": "workbench.action.toggleMaximizedPanel",
+      "when": "terminalFocus && terminalIsOpen  && !panelMaximized"
+   },
+   // ! ----- restore the terminal view ("shift + down")
+   {
+      "key": "shift+down",
+      "command": "workbench.action.toggleMaximizedPanel",
+      "when": "terminalFocus && terminalIsOpen && panelMaximized"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- navigate to the previous tab in terminal view ("Alt + upArrow")
+   {
+      "key": "alt+up",
+      "command": "workbench.action.terminal.focusPrevious",
+      "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
    },
    {
-      "key": "shift+alt+1",
-      "command": "workbench.action.selectTheme"
+      "key": "ctrl+pageup",
+      "command": "-workbench.action.terminal.focusPrevious",
+      "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- navigate to the next tab in terminal view ("Alt + downArrow")
+   {
+      "key": "alt+down",
+      "command": "workbench.action.terminal.focusNext",
+      "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
    },
    {
-      "key": "shift+alt+2",
-      "command": "workbench.action.selectIconTheme"
+      "key": "ctrl+pagedown",
+      "command": "-workbench.action.terminal.focusNext",
+      "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+   },
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- console.log the selected variable ("ctrl + l" || "ctrl + Alt + l" ) [ turbo console log ]
+   {
+      "key": "ctrl+l",
+      "command": "turboConsoleLog.displayLogMessage"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- Removed the keyboard shortcut for changing Zoom level ("ctrl + =" "ctrl + shift + =")
+   {
+      "key": "ctrl+=",
+      "command": "-workbench.action.zoomIn"
    },
    {
-      "key": "shift+alt+3",
-      "command": "workbench.action.selectProductIconTheme"
+      "key": "ctrl+-",
+      "command": "-workbench.action.zoomOut"
+   },
+
+   // ! ----- Removed the keyboard shortcut for changing Zoom level ("ctrl + -" "ctrl + shift + -")
+   {
+      "key": "ctrl+shift+-",
+      "command": "-workbench.action.zoomOut"
    },
    {
-      "key": "shift+alt+q",
-      "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
-      "when": "inEditorsPicker && inQuickOpen"
+      "key": "ctrl+shift+=",
+      "command": "-workbench.action.zoomIn"
+   },
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- show single tab ("ctrl + k tab")
+   {
+      "key": "ctrl+k tab",
+      "command": "workbench.action.showEditorTab"
+   },
+   // ! ----- show multiple tab ("ctrl + k tab")
+   {
+      "key": "ctrl+k shift+tab",
+      "command": "workbench.action.showMultipleEditorTabs"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- Toggle the minimap ("ctrl + k m")
+   {
+      "key": "ctrl+k m",
+      "command": "editor.action.toggleMinimap"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- reload the developer window ("ctrl + k r")
+   {
+      "key": "ctrl+k r",
+      "command": "workbench.action.reloadWindow"
    },
    {
-      "key": "ctrl+shift+tab",
-      "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
-      "when": "inEditorsPicker && inQuickOpen"
-   },
-   {
-      "key": "alt+1",
-      "command": "workbench.action.showCommands"
-   },
-   {
-      "key": "ctrl+shift+'",
-      "command": "workbench.action.toggleStatusbarVisibility"
-   },
-   {
-      "key": "shift+alt+'",
-      "command": "workbench.action.toggleStatusbarVisibility"
-   },
-   {
-      "key": "ctrl+shift+;",
-      "command": "breadcrumbs.toggle"
-   },
-   {
-      "key": "shift+alt+;",
-      "command": "breadcrumbs.toggle"
-   },
-   {
-      "key": "shift+alt+enter",
-      "command": "workbench.action.toggleSidebarVisibility"
-   },
-   {
-      "key": "alt+1",
-      "command": "workbench.action.closeQuickOpen",
-      "when": "inQuickOpen"
-   },
-   {
-      "key": "alt+2",
-      "command": "workbench.action.closeQuickOpen",
-      "when": "inQuickOpen"
-   },
-   {
-      "key": "escape",
-      "command": "-keybindings.editor.clearSearchResults",
-      "when": "inKeybindings && inKeybindingsSearch"
-   },
-   {
-      "key": "alt+3",
-      "command": "workbench.action.gotoLine"
-   },
-   {
-      "key": "alt+3",
-      "command": "workbench.action.closeQuickOpen",
-      "when": "inQuickOpen"
-   },
-   {
-      "key": "alt+4",
-      "command": "-workbench.action.openEditorAtIndex4"
-   },
-   {
-      "key": "alt+4",
-      "command": "workbench.action.gotoSymbol",
-      "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
-   },
-   {
-      "key": "alt+4",
-      "command": "workbench.action.closeQuickOpen",
-      "when": "inQuickOpen"
-   },
-   {
-      "key": "ctrl+shift+enter",
-      "command": "workbench.action.pinEditor",
-      "when": "!activeEditorIsPinned"
-   },
-   {
-      "key": "ctrl+shift+enter",
-      "command": "workbench.action.unpinEditor",
-      "when": "activeEditorIsPinned"
+      "key": "ctrl+k r",
+      "command": "-workbench.action.files.revealActiveFileInWindows"
    }
+   // ----------------------------------------------------------------------------------------------------- \\
 ]
