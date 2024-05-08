@@ -138,7 +138,8 @@
       "tabnine",
       "titlebar",
       "togglequotes",
-      "Trady"
+      "Trady",
+      "vercel"
    ],
 
    // ---------------------------------- Normal setting ------------------------------------------- \\
@@ -234,7 +235,7 @@
    "git.enableSmartCommit": true,
    "git.confirmSync": false,
    "workbench.sideBar.location": "right",
-   "workbench.activityBar.location": "side",
+   "workbench.activityBar.location": "hidden",
    "editor.guides.indentation": false,
    "breadcrumbs.enabled": false,
    "extensions.autoUpdate": false,

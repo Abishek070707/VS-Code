@@ -243,6 +243,93 @@
    {
       "key": "ctrl+k r",
       "command": "-workbench.action.files.revealActiveFileInWindows"
+   },
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- toggle the comment in the active line  ("Alt + /")
+   {
+      "key": "alt+/",
+      "command": "editor.action.accessibleViewAcceptInlineCompletion",
+      "when": "accessibleViewIsShown && accessibleViewCurrentProviderId == 'inlineCompletions'"
+   },
+   {
+      "key": "alt+/",
+      "command": "editor.action.commentLine",
+      "when": "editorTextFocus && !editorReadonly"
+   },
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- pin and unpin the active editor ("ctrl + k p")
+   {
+      "key": "ctrl+k p",
+      "command": "workbench.action.pinEditor",
+      "when": "!activeEditorIsPinned"
+   },
+   {
+      "key": "ctrl+k p",
+      "command": "workbench.action.unpinEditor",
+      "when": "activeEditorIsPinned"
+   },
+   {
+      "key": "ctrl+k p",
+      "command": "-workbench.action.files.copyPathOfActiveFile"
+   },
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- focus on the sidebar  [ whether its in explorer || extensions || anything in the sidebar ] ("shift + enter" || "ctrl + 0")
+   {
+      "key": "shift+enter",
+      "command": "workbench.action.focusSideBar"
+   },
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- move the active editor to the right ("ctrl + shift + fn + upArrow")
+   {
+      "key": "ctrl+shift+pageup",
+      "command": "workbench.action.moveEditorRightInGroup"
+   },
+   {
+      "key": "ctrl+shift+pagedown",
+      "command": "-workbench.action.moveEditorRightInGroup"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- move the active editor to the left ("ctrl + shift + fn + downArrow")
+   {
+      "key": "ctrl+shift+pagedown",
+      "command": "workbench.action.moveEditorLeftInGroup"
+   },
+   {
+      "key": "ctrl+shift+pageup",
+      "command": "-workbench.action.moveEditorLeftInGroup"
+   },
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- move the active editor to the right ("ctrl + shift + fn + rightArrow")
+   {
+      "key": "ctrl+shift+end",
+      "command": "workbench.action.moveEditorRightInGroup"
+   },
+   {
+      "key": "ctrl+shift+end",
+      "command": "-cursorBottomSelect",
+      "when": "textInputFocus"
+   },
+
+   // ----------------------------------------------------------------------------------------------------- \\
+
+   // ! ----- move the active editor to the left ("ctrl + shift + fn + leftArrow")
+   {
+      "key": "ctrl+shift+home",
+      "command": "workbench.action.moveEditorLeftInGroup"
+   },
+
+   {
+      "key": "ctrl+shift+home",
+      "command": "-cursorTopSelect",
+      "when": "textInputFocus"
    }
+
    // ----------------------------------------------------------------------------------------------------- \\
 ]

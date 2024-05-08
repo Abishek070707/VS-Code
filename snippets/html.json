@@ -106,4 +106,29 @@
       "body": "<meta name=\"author\" content=\"Abishek\">",
       "description": "author name for metadata"
    },
+
+   "div with class": {
+      "prefix": "div",
+      "body": "<div class=\"$1\">$0</div>"
+   },
+   "div with id": {
+      "prefix": "div",
+      "body": "<div id=\"$1\">$0</div>"
+   },
+   "div with class and id": {
+      "prefix": "div",
+      "body": "<div class=\"$1\" id=\"$2\">$0</div>"
+   },
+   "h1 with class": {
+      "prefix": "h1",
+      "body": "<h1 class=\"$1\">$0</h1>"
+   },
+   "h1 with id": {
+      "prefix": "h1",
+      "body": "<h1 id=\"$1\">$0</h1>"
+   },
+   "h1 with class and id": {
+      "prefix": "h1",
+      "body": "<h1 class=\"$1\" id=\"$2\">$0</h1>"
+   }
 }
